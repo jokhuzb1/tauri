@@ -1,4 +1,3 @@
-// src/firebase/firebase.ts
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, enableIndexedDbPersistence } from "firebase/firestore";
@@ -10,19 +9,17 @@ const firebaseConfig = {
   databaseURL:
     "https://caritn-d9d97-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "caritn-d9d97",
-  storageBucket: "caritn-d9d97.appspot.com", // fixed typo: .app → .com
+  storageBucket: "caritn-d9d97.appspot.com",
   messagingSenderId: "125187662667",
   appId: "1:125187662667:web:7a52310fa8715734ccfece",
   measurementId: "G-KJ9V1G7BKQ",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Enable offline data persistence
 enableIndexedDbPersistence(db)
   .then(() => {
     console.log("✅ Offline persistence enabled");
