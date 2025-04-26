@@ -21,6 +21,14 @@ const Sidebar: React.FC = () => {
             Sales
           </Link>
         </li>
+        <li>
+          <Link
+            to="/product-list"
+            className="hover:bg-blue-600 p-2 rounded block"
+          >
+            Products
+          </Link>
+        </li>
       </ul>
     </div>
   );

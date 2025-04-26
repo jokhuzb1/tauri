@@ -12,8 +12,10 @@ import Dashboard from "./pages/Dashboard";
 import Inventory from "./pages/Inventory";
 import Sales from "./pages/Sales";
 import Login from "./pages/Login";
+import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import { useAuth } from "./context/AuthContext";
+import AddProduct from "./pages/AddProduct";
 
 const App: React.FC = () => {
   const { auth } = useAuth();
@@ -41,6 +43,8 @@ const App: React.FC = () => {
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/inventory" element={<Inventory />} />
                   <Route path="/sales" element={<Sales />} />
+                  <Route path="/product-list" element={<ProductList />} />
+                  <Route path="/add-product" element={<AddProduct />} />
                   <Route path="*" element={<Navigate to="/" />} />
                 </>
               )}

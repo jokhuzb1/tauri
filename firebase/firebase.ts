@@ -33,5 +33,4 @@ enableIndexedDbPersistence(db)
       console.error("❌ Offline persistence error:", err);
     }
   });
-
 export { db, auth, app };
